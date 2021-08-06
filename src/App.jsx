@@ -9,7 +9,7 @@ const App = () => {
         <main className="container mx-auto p-10 lg:p-16">
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/:id" component={Game} />
+            <Route path="/games/:id" component={Game} />
           </Switch>
         </main>
       </Router>

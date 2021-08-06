@@ -11,7 +11,7 @@ const GameCard = ({
   platform,
 }) => {
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/games/${id}`}>
       <div className="w-full bg-secondary-500 rounded-xl transform transition-transform hover:-translate-y-2">
         <img src={thumbnail} alt={title} className="rounded-t-xl h-36 w-full" />
         <div className="p-5 space-y-3">
