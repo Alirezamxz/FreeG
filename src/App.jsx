@@ -6,10 +6,12 @@ const App = () => {
   return (
     <>
       <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/:id" component={Game} />
-        </Switch>
+        <main className="container mx-auto p-10 lg:p-16">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/:id" component={Game} />
+          </Switch>
+        </main>
       </Router>
     </>
   );
