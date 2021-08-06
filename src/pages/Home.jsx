@@ -6,6 +6,7 @@ import { Games } from "../services/games";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import GameCard from "../components/GameCard";
 import SkGameCard from "../Skeletons/SkGameCard";
+import logo from "../assets/images/logo.png";
 
 export const Home = () => {
   const [selectedPlatform, setSelectedPlatform] = useState(platforms[0]);
@@ -33,14 +34,11 @@ export const Home = () => {
   return (
     <div>
       <div className="space-y-5 mb-16">
-        <h3 className="text-4xl text-primary-500 font-bold text-center">
-          LOGO
-        </h3>
+        <img src={logo} alt="logo" className="mx-auto" />
         <p className="text-secondary-200 w-full lg:w-2/3 2xl:w-1/2 mx-auto text-center leading-loose">
-          is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make
+          Looking for the best free game? Check out this list of free games for
+          PC and browsers. By clicking on any game, you can get detailed
+          information about it.
         </p>
       </div>
       <div className="md:flex items-center justify-between mb-16">
