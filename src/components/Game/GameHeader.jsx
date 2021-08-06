@@ -1,5 +1,6 @@
 import React from "react";
 import { RiToolsFill, RiBankCard2Line } from "react-icons/ri";
+import { useTruncate } from "../../hooks/useTruncate";
 
 export const GameHeader = ({
   id,
@@ -9,6 +10,7 @@ export const GameHeader = ({
   publisher,
   developer,
 }) => {
+  const { text } = useTruncate(desc, { length: 200, ending: "..." });
   return (
     <div>
       {cover && (
@@ -32,8 +34,8 @@ export const GameHeader = ({
         </video>
         <div className="space-y-6">
           <h4 className="font-semibold text-3xl">{title}</h4>
-          <p className="opacity-80 max-h-20 overflow-hidden leading-loose">
-            {desc}
+          <p className="opacity-80 max-h-24 overflow-hidden leading-loose">
+            {text}
           </p>
           <div className="flex items-center space-x-5">
             <span className="flex" title="Publisher">

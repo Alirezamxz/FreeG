@@ -16,29 +16,39 @@ export const GameReq = ({ title, platform, system }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
           <div className="space-y-2 mb-7">
             <span className="block text-primary-300 font-semibold">OS</span>
-            <span className="block text-secondary-200">{system.os}</span>
+            <span className="block text-secondary-200 w-2/3 truncate">
+              {system.os}
+            </span>
           </div>
           <div className="space-y-2 mb-7">
             <span className="block text-primary-300 font-semibold">
               Processor
             </span>
-            <span className="block text-secondary-200">{system.processor}</span>
+            <span className="block text-secondary-200 w-2/3 truncate">
+              {system.processor}
+            </span>
           </div>
           <div className="space-y-2 mb-7">
             <span className="block text-primary-300 font-semibold">Memory</span>
-            <span className="block text-secondary-200">{system.memory}</span>
+            <span className="block text-secondary-200 w-2/3 truncate">
+              {system.memory}
+            </span>
           </div>
           <div className="space-y-2 mb-7">
             <span className="block text-primary-300 font-semibold">
               Graphics
             </span>
-            <span className="block text-secondary-200">{system.graphics}</span>
+            <span className="block text-secondary-200  w-2/3 truncate">
+              {system.graphics}
+            </span>
           </div>
           <div className="space-y-2 mb-7">
             <span className="block text-primary-300 font-semibold">
               Storage
             </span>
-            <span className="block text-secondary-200">{system.storage}</span>
+            <span className="block text-secondary-200 w-2/3 truncate">
+              {system.storage}
+            </span>
           </div>
         </div>
       )}
