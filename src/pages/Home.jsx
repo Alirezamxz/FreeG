@@ -5,7 +5,7 @@ import { platforms, sort } from "../config/FilterItems";
 import { Games } from "../services/games";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import GameCard from "../components/GameCard";
-import SkGameCard from "../Skeletons/SkGameCard";
+import SkGameCard from "../skeletons/SkGameCard";
 import logo from "../assets/images/logo.png";
 
 export const Home = () => {
@@ -24,6 +24,7 @@ export const Home = () => {
         selectedPlatform.url,
         selectedSort.url
       );
+      console.log(data);
       setGames(data);
       if (currentPage > 1) {
         jump(1);
@@ -80,7 +81,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
-        {currentData().length > 0
+        {games.length > 0
           ? currentData().map(game => <GameCard key={game.id} {...game} />)
           : [1, 2, 3, 4, 5, 6].map(item => <SkGameCard key={item} />)}
       </div>
