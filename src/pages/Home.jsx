@@ -5,7 +5,7 @@ import { platforms, sort } from "../config/FilterItems";
 import { Games } from "../services/games";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import GameCard from "../components/GameCard";
-import SkGameCard from "../skeletons/SkGameCard";
+import SkGameCard from "../Skeletons/SkGameCard";
 import logo from "../assets/images/logo.png";
 
 export const Home = () => {
