@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { MdArrowBack } from "react-icons/md";
 import { Games } from "../services/games";
 import { GameHeader, GameDetails, GameReq } from "../components/Game";
 
@@ -18,6 +19,10 @@ export const Game = () => {
     <>
       {game.screenshots ? (
         <>
+          <Link to="/" className="flex items-center text-secondary-100">
+            <MdArrowBack className="text-lg" />{" "}
+            <span className="text-md ml-2">Back</span>
+          </Link>
           <GameHeader
             id={id}
             cover={game.screenshots[0].image}

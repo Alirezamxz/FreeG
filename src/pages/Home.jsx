@@ -83,7 +83,7 @@ export const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
         {games.length > 0
           ? currentData().map(game => <GameCard key={game.id} {...game} />)
-          : [1, 2, 3, 4, 5, 6].map(item => <SkGameCard key={item} />)}
+          : [1, 2, 3, 4, 5].map(item => <SkGameCard key={item} />)}
       </div>
     </div>
   );
