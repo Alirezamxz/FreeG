@@ -30,6 +30,8 @@ export const Game = () => {
             desc={game.short_description}
             publisher={game.publisher}
             developer={game.developer}
+            platform={game.platform}
+            url={game.game_url}
           />
           <GameDetails
             title={game.title}

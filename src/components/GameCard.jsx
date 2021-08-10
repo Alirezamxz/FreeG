@@ -27,7 +27,9 @@ const GameCard = ({
           <div className="flex justify-between">
             <span className="text-xs font-semibold my-auto">{genre}</span>
             <span>
-              {platform === "PC (Windows)" ? (
+              {platform.includes("windows") ||
+              platform.includes("Windows") ||
+              platform.includes("PC (Windows)") ? (
                 <DiWindows className="text-primary-500 w-6 h-6" />
               ) : (
                 <DiChrome className="text-primary-500 w-6 h-6" />
